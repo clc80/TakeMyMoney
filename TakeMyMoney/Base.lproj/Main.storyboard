@@ -72,6 +72,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgL-jS-rUf"/>
+                                    <segue destination="PlM-YX-u3D" kind="show" id="nt8-Da-Sqs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,6 +106,129 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="81.696428571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jvt-vU-Hex">
+            <objects>
+                <viewController id="PlM-YX-u3D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DXB-eR-Mqs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-rX-8Gs">
+                                <rect key="frame" x="57" y="104" width="300" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Fdj-x9-4Xm"/>
+                                    <constraint firstAttribute="width" secondItem="Q7B-rX-8Gs" secondAttribute="height" multiplier="2:1" id="gIW-q8-He9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C26-A6-ZBq">
+                                <rect key="frame" x="20" y="789" width="354" height="43"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.43529411759999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="2Cd-HC-ewn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Proceed To Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9Q-6o-GaI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw3-Ed-nx4">
+                                <rect key="frame" x="57" y="316" width="300" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-cards" translatesAutoresizingMaskIntoConstraints="NO" id="2YX-Od-3kv">
+                                        <rect key="frame" x="15" y="18" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="1Us-Xz-Nr2"/>
+                                            <constraint firstAttribute="width" secondItem="2YX-Od-3kv" secondAttribute="height" multiplier="1:1" id="8OS-y4-E5E"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlB-a5-8Fe">
+                                        <rect key="frame" x="99" y="18" width="89" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="8QE-8Q-DUM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Ending **89" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fb-hK-XEI">
+                                        <rect key="frame" x="99" y="60" width="126" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="cFI-pU-9rD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="VlB-a5-8Fe" firstAttribute="leading" secondItem="2YX-Od-3kv" secondAttribute="trailing" constant="20" id="8YI-2N-AhY"/>
+                                    <constraint firstItem="VlB-a5-8Fe" firstAttribute="top" secondItem="2YX-Od-3kv" secondAttribute="top" id="A2Z-bw-rAd"/>
+                                    <constraint firstItem="2YX-Od-3kv" firstAttribute="leading" secondItem="zw3-Ed-nx4" secondAttribute="leading" constant="15" id="ENj-vQ-fGY"/>
+                                    <constraint firstItem="0fb-hK-XEI" firstAttribute="leading" secondItem="VlB-a5-8Fe" secondAttribute="leading" id="TLI-1f-qp0"/>
+                                    <constraint firstAttribute="height" constant="100" id="nbR-AD-lMY"/>
+                                    <constraint firstItem="2YX-Od-3kv" firstAttribute="centerY" secondItem="zw3-Ed-nx4" secondAttribute="centerY" id="sgx-6y-frW"/>
+                                    <constraint firstItem="0fb-hK-XEI" firstAttribute="bottom" secondItem="2YX-Od-3kv" secondAttribute="bottom" id="xX4-Mx-qDp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-xd-YFf">
+                                <rect key="frame" x="57" y="284" width="159" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="f0Z-PT-UfK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMO2021" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Ws-3HN">
+                                <rect key="frame" x="57" y="464" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FVe-sy-4kA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use promo code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QG-Uh-z6u">
+                                <rect key="frame" x="57" y="432" width="127" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="KfK-pc-isq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yhk-fq-Dka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ISL-Ws-3HN" firstAttribute="leading" secondItem="7QG-Uh-z6u" secondAttribute="leading" id="0nt-aa-UUB"/>
+                            <constraint firstItem="Yhk-fq-Dka" firstAttribute="bottom" secondItem="C26-A6-ZBq" secondAttribute="bottom" constant="30" id="5k4-Nv-5xo"/>
+                            <constraint firstItem="zw3-Ed-nx4" firstAttribute="trailing" secondItem="Q7B-rX-8Gs" secondAttribute="trailing" id="A1s-Sa-c28"/>
+                            <constraint firstItem="VEd-xd-YFf" firstAttribute="top" secondItem="Q7B-rX-8Gs" secondAttribute="bottom" constant="30" id="E2o-ve-jgo"/>
+                            <constraint firstItem="zw3-Ed-nx4" firstAttribute="leading" secondItem="VEd-xd-YFf" secondAttribute="leading" id="GgP-ux-TDy"/>
+                            <constraint firstItem="zw3-Ed-nx4" firstAttribute="top" secondItem="VEd-xd-YFf" secondAttribute="bottom" constant="8" id="HI4-P5-ViN"/>
+                            <constraint firstItem="VEd-xd-YFf" firstAttribute="leading" secondItem="Q7B-rX-8Gs" secondAttribute="leading" id="Hl3-yF-T8Q"/>
+                            <constraint firstItem="7QG-Uh-z6u" firstAttribute="leading" secondItem="zw3-Ed-nx4" secondAttribute="leading" id="IYE-Nx-Hnm"/>
+                            <constraint firstItem="C26-A6-ZBq" firstAttribute="leading" secondItem="Yhk-fq-Dka" secondAttribute="leading" constant="20" id="Nkm-Lo-pdw"/>
+                            <constraint firstItem="ISL-Ws-3HN" firstAttribute="trailing" secondItem="zw3-Ed-nx4" secondAttribute="trailing" id="bz0-Zi-TMe"/>
+                            <constraint firstItem="Q7B-rX-8Gs" firstAttribute="centerX" secondItem="DXB-eR-Mqs" secondAttribute="centerX" id="dvk-l5-h8a"/>
+                            <constraint firstItem="Q7B-rX-8Gs" firstAttribute="top" secondItem="Yhk-fq-Dka" secondAttribute="top" constant="16" id="gGb-6m-xNQ"/>
+                            <constraint firstItem="ISL-Ws-3HN" firstAttribute="top" secondItem="7QG-Uh-z6u" secondAttribute="bottom" constant="8" id="lLC-z3-u7I"/>
+                            <constraint firstItem="7QG-Uh-z6u" firstAttribute="top" secondItem="zw3-Ed-nx4" secondAttribute="bottom" constant="16" id="oj2-JV-z30"/>
+                            <constraint firstItem="Yhk-fq-Dka" firstAttribute="trailing" secondItem="C26-A6-ZBq" secondAttribute="trailing" constant="40" id="qjK-Ml-Cjw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6LA-YX-yaG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6e-tY-ALp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695.6521739130435" y="95.758928571428569"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CJj-He-NGU">
             <objects>
@@ -125,8 +249,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="coupon" width="334" height="220"/>
+        <image name="credit-cards" width="535" height="339"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
