@@ -32,7 +32,7 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
     }
     
     func checkEmptyFields() {
-        print("Checking for empty fields in CreditCard View")
+
         //check the credit card field
         if let creditCardNumber = CardNumberTextField.text, !creditCardNumber.isEmpty, creditCardNumber.count == 16  {
             CardNumberTextField.placeholder = ""
@@ -69,7 +69,7 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             CVVTextField.text = ""
         }
         // check the name
-        if let firstandLastName = CardHolderNameTextField.text, !firstandLastName.isEmpty {
+        if let firstandLastName = CardHolderNameTextField.text, !firstandLastName.isEmpty, firstandLastName.contains(" ") && firstandLastName.last != " " {
             CardHolderNameTextField.placeholder = ""
             CardHolderNameTextField.layer.borderWidth = 0.0
             CardHolderNameTextField.layer.borderColor = UIColor.clear.cgColor
@@ -108,9 +108,7 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
         }
         
         if textField == CardNumberTextField && textFieldText.count > 4 {
-            let cardTextField = textFieldText.filter("0123456789".contains)
-            cardNumber = cardTextField
-            print("the card number is " + cardTextField)
+            cardNumber = textFieldText
             
             var showSomeNumbers = ""
             let passwordArray = Array(cardNumber)
@@ -119,20 +117,9 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             }
             for i in (passwordArray.count - 4)...(passwordArray.count - 1) {
                 showSomeNumbers.append(passwordArray[i])
-                print(passwordArray)
             }
             textField.text = showSomeNumbers
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

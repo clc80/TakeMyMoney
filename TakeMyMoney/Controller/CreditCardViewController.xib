@@ -61,7 +61,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="C6N-dU-io7"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                     </userDefinedRuntimeAttributes>
