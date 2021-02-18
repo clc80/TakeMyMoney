@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A40EBF225DB7D83007EF25D /* MonthYearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40EBF125DB7D83007EF25D /* MonthYearPicker.swift */; };
 		3A49889625D36ED10048DA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49889525D36ED10048DA71 /* AppDelegate.swift */; };
 		3A49889825D36ED10048DA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49889725D36ED10048DA71 /* SceneDelegate.swift */; };
-		3A49889A25D36ED10048DA71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49889925D36ED10048DA71 /* ViewController.swift */; };
+		3A49889A25D36ED10048DA71 /* PaymentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49889925D36ED10048DA71 /* PaymentDataViewController.swift */; };
 		3A49889D25D36ED10048DA71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A49889B25D36ED10048DA71 /* Main.storyboard */; };
 		3A49889F25D36ED40048DA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A49889E25D36ED40048DA71 /* Assets.xcassets */; };
 		3A4988A225D36ED40048DA71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4988A025D36ED40048DA71 /* LaunchScreen.storyboard */; };
+		3AB8067D25D5D50400B976F2 /* PayPalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8067B25D5D50400B976F2 /* PayPalViewController.swift */; };
+		3AB8067E25D5D50400B976F2 /* PayPalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB8067C25D5D50400B976F2 /* PayPalViewController.xib */; };
+		3AB8068225D5D51B00B976F2 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8068025D5D51B00B976F2 /* CreditCardViewController.swift */; };
+		3AB8068325D5D51B00B976F2 /* CreditCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB8068125D5D51B00B976F2 /* CreditCardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A40EBF125DB7D83007EF25D /* MonthYearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPicker.swift; sourceTree = "<group>"; };
 		3A49889225D36ED10048DA71 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A49889525D36ED10048DA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A49889725D36ED10048DA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A49889925D36ED10048DA71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A49889925D36ED10048DA71 /* PaymentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataViewController.swift; sourceTree = "<group>"; };
 		3A49889C25D36ED10048DA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A49889E25D36ED40048DA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4988A125D36ED40048DA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4988A325D36ED40048DA71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB8067B25D5D50400B976F2 /* PayPalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalViewController.swift; sourceTree = "<group>"; };
+		3AB8067C25D5D50400B976F2 /* PayPalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayPalViewController.xib; sourceTree = "<group>"; };
+		3AB8068025D5D51B00B976F2 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		3AB8068125D5D51B00B976F2 /* CreditCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,36 @@
 		3A49889425D36ED10048DA71 /* TakeMyMoney */ = {
 			isa = PBXGroup;
 			children = (
+				3A4988AB25D373390048DA71 /* View */,
+				3AB8067925D5D4DC00B976F2 /* Controller */,
 				3A49889525D36ED10048DA71 /* AppDelegate.swift */,
 				3A49889725D36ED10048DA71 /* SceneDelegate.swift */,
-				3A49889925D36ED10048DA71 /* ViewController.swift */,
 				3A49889B25D36ED10048DA71 /* Main.storyboard */,
 				3A49889E25D36ED40048DA71 /* Assets.xcassets */,
 				3A4988A025D36ED40048DA71 /* LaunchScreen.storyboard */,
 				3A4988A325D36ED40048DA71 /* Info.plist */,
 			);
 			path = TakeMyMoney;
+			sourceTree = "<group>";
+		};
+		3A4988AB25D373390048DA71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A40EBF125DB7D83007EF25D /* MonthYearPicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AB8067925D5D4DC00B976F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A49889925D36ED10048DA71 /* PaymentDataViewController.swift */,
+				3AB8067B25D5D50400B976F2 /* PayPalViewController.swift */,
+				3AB8067C25D5D50400B976F2 /* PayPalViewController.xib */,
+				3AB8068025D5D51B00B976F2 /* CreditCardViewController.swift */,
+				3AB8068125D5D51B00B976F2 /* CreditCardViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +158,8 @@
 				3A4988A225D36ED40048DA71 /* LaunchScreen.storyboard in Resources */,
 				3A49889F25D36ED40048DA71 /* Assets.xcassets in Resources */,
 				3A49889D25D36ED10048DA71 /* Main.storyboard in Resources */,
+				3AB8067E25D5D50400B976F2 /* PayPalViewController.xib in Resources */,
+				3AB8068325D5D51B00B976F2 /* CreditCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A49889A25D36ED10048DA71 /* ViewController.swift in Sources */,
+				3A49889A25D36ED10048DA71 /* PaymentDataViewController.swift in Sources */,
 				3A49889625D36ED10048DA71 /* AppDelegate.swift in Sources */,
 				3A49889825D36ED10048DA71 /* SceneDelegate.swift in Sources */,
+				3A40EBF225DB7D83007EF25D /* MonthYearPicker.swift in Sources */,
+				3AB8067D25D5D50400B976F2 /* PayPalViewController.swift in Sources */,
+				3AB8068225D5D51B00B976F2 /* CreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

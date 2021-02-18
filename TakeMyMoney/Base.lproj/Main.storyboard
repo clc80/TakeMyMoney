@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rDy-fQ-biV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Payment Data-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PaymentDataViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T53-ac-dY3">
+                                <rect key="frame" x="16" y="98" width="79" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Cny-cX-3nt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2,000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6q-iH-G4w">
+                                <rect key="frame" x="16" y="130" width="199" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qxK-Uq-860"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
+                                <color key="textColor" red="0.32156862745098036" green="0.43529411764705883" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-8f-jQi">
+                                <rect key="frame" x="16" y="210" width="131" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ale-Tr-ETA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jM8-LN-5XE">
+                                <rect key="frame" x="116.5" y="242" width="181" height="32"/>
+                                <color key="backgroundColor" red="0.62745098040000002" green="0.68627450980000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Pay Pal"/>
+                                    <segment title="Credit Card"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.32156862749999998" green="0.43529411759999997" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="PaymentTypeSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6gT-nQ-fAe"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-Wa-C1J">
+                                <rect key="frame" x="0.0" y="289" width="414" height="514"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qll-pm-5Mi">
+                                <rect key="frame" x="20" y="811" width="374" height="43"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.43529411759999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="XoN-0W-WVD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Proceed To Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgL-jS-rUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jM8-LN-5XE" firstAttribute="top" secondItem="n7y-8f-jQi" secondAttribute="bottom" constant="8" id="5zV-Qi-36I"/>
+                            <constraint firstItem="T53-ac-dY3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="65w-hg-GTX"/>
+                            <constraint firstItem="FP7-Wa-C1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7br-2l-5KN"/>
+                            <constraint firstItem="qll-pm-5Mi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dcf-04-4u6"/>
+                            <constraint firstItem="T53-ac-dY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IHX-Mr-jkX"/>
+                            <constraint firstItem="jM8-LN-5XE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O58-gY-ovp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FP7-Wa-C1J" secondAttribute="trailing" id="Ps8-v8-2Ig"/>
+                            <constraint firstItem="qll-pm-5Mi" firstAttribute="top" secondItem="FP7-Wa-C1J" secondAttribute="bottom" constant="8" id="QCp-P6-sjE"/>
+                            <constraint firstItem="FP7-Wa-C1J" firstAttribute="top" secondItem="jM8-LN-5XE" secondAttribute="bottom" constant="16" id="T3j-Ax-Udc"/>
+                            <constraint firstItem="n7y-8f-jQi" firstAttribute="leading" secondItem="s6q-iH-G4w" secondAttribute="leading" id="XaG-Mc-uxi"/>
+                            <constraint firstItem="n7y-8f-jQi" firstAttribute="top" secondItem="s6q-iH-G4w" secondAttribute="bottom" constant="20" id="XsY-Mf-xBY"/>
+                            <constraint firstItem="s6q-iH-G4w" firstAttribute="top" secondItem="T53-ac-dY3" secondAttribute="bottom" constant="8" id="YGI-3U-cPr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qll-pm-5Mi" secondAttribute="bottom" constant="8" id="alU-Kz-xt9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qll-pm-5Mi" secondAttribute="trailing" constant="20" id="kuh-GY-jQN"/>
+                            <constraint firstItem="s6q-iH-G4w" firstAttribute="leading" secondItem="T53-ac-dY3" secondAttribute="leading" id="ppB-C9-4Uq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Payment Data" id="DDL-op-oAk"/>
+                    <connections>
+                        <outlet property="PaymentSegmentedControl" destination="jM8-LN-5XE" id="p06-dD-FPr"/>
+                        <outlet property="viewContainer" destination="FP7-Wa-C1J" id="LFL-lX-ppF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="81.696428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CJj-He-NGU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rDy-fQ-biV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Ui-eY-DDE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WZf-Gm-YtZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anw-j9-vKr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
