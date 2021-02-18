@@ -9,13 +9,10 @@ import UIKit
 
 class CreditCardViewController: UIViewController {
     
-    
-    
     // MARK: - IBOutlet
     @IBOutlet var CardNumberTextField: UITextField!
     @IBOutlet var CVVTextField: UITextField!
     @IBOutlet var CardHolderNameTextField: UITextField!
-    //@IBOutlet var DatePicker: MonthYearPickerView!
     @IBOutlet var DatePickerTextField: UITextField!
     
     let datePicker = MonthYearPickerView()
