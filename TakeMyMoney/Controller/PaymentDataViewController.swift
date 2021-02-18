@@ -37,6 +37,11 @@ class PaymentDataViewController: UIViewController {
     @IBAction func ProceedButtonPressed(_ sender: UIButton) {
         let viewShown = self.PaymentSegmentedControl.selectedSegmentIndex
         print(viewShown)
+        
+        // if the credit card view is shown
+        if viewShown == 1 {
+            creditcardvc.checkEmptyFields()
+        }
     }
     
 
