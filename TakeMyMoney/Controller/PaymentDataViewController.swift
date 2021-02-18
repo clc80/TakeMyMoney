@@ -14,13 +14,16 @@ class PaymentDataViewController: UIViewController {
     @IBOutlet var PaymentSegmentedControl: UISegmentedControl!
     
     var views: [UIView]!
-    let creditcardvc =  CreditCardViewController(nibName: "CreditCardViewController", bundle: nil)
+    
+    let creditCardVC =  CreditCardViewController(nibName: "CreditCardViewController", bundle: nil)
+    let paypalVC = PayPalViewController(nibName: "PayPalViewController", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         views = [UIView]()
-        views.append(PayPalViewController().view)
-        views.append(creditcardvc.view)
+        views.append(paypalVC.view)
+        views.append(creditCardVC.view)
         
         for v in views {
             viewContainer.addSubview(v)
@@ -36,11 +39,12 @@ class PaymentDataViewController: UIViewController {
     
     @IBAction func ProceedButtonPressed(_ sender: UIButton) {
         let viewShown = self.PaymentSegmentedControl.selectedSegmentIndex
-        print(viewShown)
         
         // if the credit card view is shown
         if viewShown == 1 {
-            creditcardvc.checkEmptyFields()
+            creditCardVC.checkEmptyFields()
+        } else if viewShown == 0 {
+            paypalVC.checkEmptyFields()
         }
     }
     

@@ -8,15 +8,44 @@
 import UIKit
 
 class PayPalViewController: UIViewController {
+    
+    //MARK:- IBOutlets
+
+    @IBOutlet var emailAddressTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    var emailAddressEntry = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func checkEmptyFields() {
-        print("Checking for empty fields in CreditCard View")
+        // check the email address
+        if let emailAddress = emailAddressTextField.text, !emailAddress.isEmpty {
+            emailAddressTextField.placeholder = ""
+            emailAddressTextField.layer.borderWidth = 0.0
+            emailAddressTextField.layer.borderColor = UIColor.clear.cgColor
+
+            emailAddressEntry = emailAddress
+        } else {
+            emailAddressTextField.layer.borderColor = UIColor.red.cgColor
+            emailAddressTextField.layer.borderWidth = 1.0
+            emailAddressTextField.attributedPlaceholder = NSAttributedString(string: "Please Enter a Valid Email Address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            emailAddressTextField.text = ""
+        }
+        
+        // check the password
+        if let password = passwordTextField.text, !password.isEmpty {
+            passwordTextField.placeholder = ""
+            passwordTextField.layer.borderWidth = 0.0
+            passwordTextField.layer.borderColor = UIColor.clear.cgColor
+        } else {
+            passwordTextField.layer.borderColor = UIColor.red.cgColor
+            passwordTextField.layer.borderWidth = 1.0
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "Please Enter a Valid Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            passwordTextField.text = ""
+        }
     }
 
 

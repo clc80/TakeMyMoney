@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayPalViewController" customModule="TakeMyMoney" customModuleProvider="target">
             <connections>
+                <outlet property="emailAddressTextField" destination="oUL-O8-7qY" id="SU4-K3-Idg"/>
+                <outlet property="passwordTextField" destination="mrv-eI-hui" id="QPp-eU-Z7F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

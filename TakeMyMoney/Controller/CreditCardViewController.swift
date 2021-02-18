@@ -81,7 +81,6 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             CardHolderNameTextField.attributedPlaceholder = NSAttributedString(string: "Enter a valid First and Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             CardHolderNameTextField.text = ""
         }
-        
     }
     
     func dismissPickerView() {
@@ -121,5 +120,4 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             textField.text = showSomeNumbers
         }
     }
-
 }
