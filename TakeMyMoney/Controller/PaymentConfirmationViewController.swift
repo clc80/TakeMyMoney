@@ -9,21 +9,33 @@ import UIKit
 
 class PaymentConfirmationViewController: UIViewController {
 
+    @IBOutlet var paymentTypeImage: UIImageView!
+    @IBOutlet var paymentTypeLabel: UILabel!
+    @IBOutlet var paymentTypeDetailsLabel: UILabel!
+    
+    var creditCard: CreditCard?
+    var paypal: PayPal?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func PayNowButtonPressed(_ sender: Any) {
     }
-    */
+    
+    func setUpViews() {
+        if let paypal = paypal {
+            paymentTypeImage.image = UIImage(named: paypal.image)
+            paymentTypeLabel.text = "PayPal"
+            paymentTypeDetailsLabel.text = "\(paypal.username)"
+        }
+        if let creditCard = creditCard {
+            paymentTypeImage.image = UIImage(named: creditCard.image)
+            paymentTypeLabel.text = "\(creditCard.Cardholder)"
+            paymentTypeDetailsLabel.text = "\(creditCard.CardNumber)"
+        }
+    }
 
 }

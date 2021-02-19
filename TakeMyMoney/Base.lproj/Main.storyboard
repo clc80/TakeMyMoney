@@ -72,7 +72,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgL-jS-rUf"/>
-                                    <segue destination="PlM-YX-u3D" kind="show" id="nt8-Da-Sqs"/>
+                                    <segue destination="PlM-YX-u3D" kind="show" identifier="checkoutSegue" id="nt8-Da-Sqs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment Confirmation View Controller-->
         <scene sceneID="jvt-vU-Hex">
             <objects>
-                <viewController id="PlM-YX-u3D" sceneMemberID="viewController">
+                <viewController id="PlM-YX-u3D" customClass="PaymentConfirmationViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DXB-eR-Mqs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,10 +129,11 @@
                                     <constraint firstAttribute="height" constant="43" id="2Cd-HC-ewn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="Proceed To Confirm">
+                                <state key="normal" title="Pay">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="PayNowButtonPressed:" destination="PlM-YX-u3D" eventType="touchUpInside" id="rsS-0Q-KWV"/>
                                     <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9Q-6o-GaI"/>
                                 </connections>
                             </button>
@@ -224,10 +225,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6LA-YX-yaG"/>
+                    <connections>
+                        <outlet property="paymentTypeDetailsLabel" destination="0fb-hK-XEI" id="yRy-Np-q5o"/>
+                        <outlet property="paymentTypeImage" destination="2YX-Od-3kv" id="GdI-qx-g4Y"/>
+                        <outlet property="paymentTypeLabel" destination="VlB-a5-8Fe" id="Itb-7i-N1j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6e-tY-ALp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695.6521739130435" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1894" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CJj-He-NGU">
