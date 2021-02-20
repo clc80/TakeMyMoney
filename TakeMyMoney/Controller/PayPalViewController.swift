@@ -14,8 +14,11 @@ class PayPalViewController: UIViewController {
     @IBOutlet var emailAddressTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    var emailAddressEntry = ""
-
+    var userName = ""
+    var PPpassword = ""
+    
+    var payPal: PayPal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,8 +29,8 @@ class PayPalViewController: UIViewController {
             emailAddressTextField.placeholder = ""
             emailAddressTextField.layer.borderWidth = 0.0
             emailAddressTextField.layer.borderColor = UIColor.clear.cgColor
-
-            emailAddressEntry = emailAddress
+            
+            userName = emailAddress
         } else {
             emailAddressTextField.layer.borderColor = UIColor.red.cgColor
             emailAddressTextField.layer.borderWidth = 1.0
@@ -40,11 +43,14 @@ class PayPalViewController: UIViewController {
             passwordTextField.placeholder = ""
             passwordTextField.layer.borderWidth = 0.0
             passwordTextField.layer.borderColor = UIColor.clear.cgColor
+            PPpassword = password
         } else {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
             passwordTextField.layer.borderWidth = 1.0
             passwordTextField.attributedPlaceholder = NSAttributedString(string: "Please Enter a Valid Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             passwordTextField.text = ""
         }
+        
+        payPal = PayPal(username: userName, password: PPpassword)
     }
 }

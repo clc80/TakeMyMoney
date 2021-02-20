@@ -23,6 +23,11 @@ class PaymentConfirmationViewController: UIViewController {
     }
     
     @IBAction func PayNowButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Your Payment Has Failed", message: "Try another method of payment", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
     }
     
     func setUpViews() {

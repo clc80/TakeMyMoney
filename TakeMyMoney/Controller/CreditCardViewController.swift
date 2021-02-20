@@ -18,6 +18,10 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
     let datePicker = MonthYearPickerView()
     var cardHolderName = ""
     var cardNumber = ""
+    var cvv = ""
+    var cardExpirationDate = ""
+    
+    var creditCard: CreditCard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +55,8 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
         if let expirationDate = DatePickerTextField.text, !expirationDate.isEmpty {
             DatePickerTextField.layer.borderWidth = 0.0
             DatePickerTextField.layer.borderColor = UIColor.clear.cgColor
+            
+            cardExpirationDate = expirationDate
         } else {
             DatePickerTextField.layer.borderColor = UIColor.red.cgColor
             DatePickerTextField.layer.borderWidth = 1.0
@@ -62,6 +68,8 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             CVVTextField.placeholder = ""
             CVVTextField.layer.borderWidth = 0.0
             CVVTextField.layer.borderColor = UIColor.clear.cgColor
+            
+            cvv = CVV
         } else {
             CVVTextField.layer.borderColor = UIColor.red.cgColor
             CVVTextField.layer.borderWidth = 1.0
@@ -81,6 +89,7 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
             CardHolderNameTextField.attributedPlaceholder = NSAttributedString(string: "Enter a valid First and Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             CardHolderNameTextField.text = ""
         }
+        creditCard = CreditCard(Cardholder: cardHolderName, CardNumber: cardNumber, ExpirationDate: cardExpirationDate, CVV: cvv)
     }
     
     func dismissPickerView() {

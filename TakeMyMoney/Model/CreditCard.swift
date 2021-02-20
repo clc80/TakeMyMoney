@@ -11,5 +11,6 @@ struct CreditCard {
     var Cardholder: String
     var CardNumber: String
     var ExpirationDate: String
+    var CVV: String
     var image: String = "credit-cards"
 }

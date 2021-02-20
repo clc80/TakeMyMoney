@@ -43,11 +43,15 @@ class PaymentDataViewController: UIViewController {
         // if the credit card view is shown
         if viewShown == 1 {
             creditCardVC.checkEmptyFields()
+            let paymentConfirmVC: PaymentConfirmationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ConfirmPaymentVC") as! PaymentConfirmationViewController
+            paymentConfirmVC.creditCard = creditCardVC.creditCard
+            navigationController?.pushViewController(paymentConfirmVC, animated: true)
         } else if viewShown == 0 {
             paypalVC.checkEmptyFields()
+            let paymentConfirmVC: PaymentConfirmationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ConfirmPaymentVC") as! PaymentConfirmationViewController
+            paymentConfirmVC.paypal = paypalVC.payPal
+            navigationController?.pushViewController(paymentConfirmVC, animated: true)
         }
     }
-    
-
 }
 

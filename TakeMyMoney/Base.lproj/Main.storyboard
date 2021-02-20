@@ -72,7 +72,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ProceedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgL-jS-rUf"/>
-                                    <segue destination="PlM-YX-u3D" kind="show" identifier="checkoutSegue" id="nt8-Da-Sqs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,13 +108,13 @@
         <!--Payment Confirmation View Controller-->
         <scene sceneID="jvt-vU-Hex">
             <objects>
-                <viewController id="PlM-YX-u3D" customClass="PaymentConfirmationViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmPaymentVC" id="PlM-YX-u3D" customClass="PaymentConfirmationViewController" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DXB-eR-Mqs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-rX-8Gs">
-                                <rect key="frame" x="57" y="104" width="300" height="150"/>
+                                <rect key="frame" x="57" y="60" width="300" height="150"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Fdj-x9-4Xm"/>
@@ -138,7 +137,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw3-Ed-nx4">
-                                <rect key="frame" x="57" y="316" width="300" height="100"/>
+                                <rect key="frame" x="57" y="272" width="300" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-cards" translatesAutoresizingMaskIntoConstraints="NO" id="2YX-Od-3kv">
                                         <rect key="frame" x="15" y="18" width="64" height="64"/>
@@ -178,7 +177,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-xd-YFf">
-                                <rect key="frame" x="57" y="284" width="159" height="24"/>
+                                <rect key="frame" x="57" y="240" width="159" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="f0Z-PT-UfK"/>
                                 </constraints>
@@ -187,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROMO2021" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-Ws-3HN">
-                                <rect key="frame" x="57" y="464" width="300" height="45"/>
+                                <rect key="frame" x="57" y="420" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="FVe-sy-4kA"/>
                                 </constraints>
@@ -195,7 +194,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use promo code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QG-Uh-z6u">
-                                <rect key="frame" x="57" y="432" width="127" height="24"/>
+                                <rect key="frame" x="57" y="388" width="127" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="KfK-pc-isq"/>
                                 </constraints>
